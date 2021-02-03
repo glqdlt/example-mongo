@@ -19,18 +19,18 @@ public class SomeController {
     @GetMapping("/log")
     public List<SomeLog> aa() {
 
-        SomeLogSub2Renamer someLog = new SomeLogSub2Renamer();
+        SomeLogSub2Renamer someLog = new SomeLogSub2Renamer("a");
         someLog.setTestField("test");
         someLogRepo.save(someLog);
 
-        SomeLogSub someLogSub = new SomeLogSub();
+        SomeLogSub someLogSub = new SomeLogSub("b");
         someLogSub.setColumnd1("columnd");
         someLogRepo.save(someLogSub);
 
         HashMap<String, Object> map = new HashMap<>();
         map.put("f1", "qqq");
         map.put("f2", 2);
-        SomeLogSubDynamicField someLogSubDynamicField = new SomeLogSubDynamicField();
+        SomeLogSubDynamicField someLogSubDynamicField = new SomeLogSubDynamicField("c");
         someLogSubDynamicField.setDynamicField(map);
 
         someLogRepo.save(someLogSubDynamicField);

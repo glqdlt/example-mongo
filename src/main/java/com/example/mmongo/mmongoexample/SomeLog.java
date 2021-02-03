@@ -9,8 +9,19 @@ import java.util.UUID;
 public abstract class SomeLog {
     private String id = UUID.randomUUID().toString();
     private LocalDateTime regDate = LocalDateTime.now();
+    private String type;
 
-    public abstract String getType();
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public SomeLog(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
 
     public String getId() {
         return id;

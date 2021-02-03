@@ -4,9 +4,10 @@ import org.springframework.data.annotation.TypeAlias;
 
 @TypeAlias("2")
 public class SomeLogSub2Renamer extends SomeLog {
-    @Override
-    public String getType() {
-        return "2";
+
+
+    public SomeLogSub2Renamer(String type) {
+        super(type);
     }
 
     private String testField;

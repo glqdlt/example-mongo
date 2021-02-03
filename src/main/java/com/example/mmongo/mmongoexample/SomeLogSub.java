@@ -6,6 +6,10 @@ import org.springframework.data.annotation.TypeAlias;
 public class SomeLogSub extends SomeLog {
     private String columnd1;
 
+    public SomeLogSub(String type) {
+        super(type);
+    }
+
     public String getColumnd1() {
         return columnd1;
     }
@@ -14,8 +18,4 @@ public class SomeLogSub extends SomeLog {
         this.columnd1 = columnd1;
     }
 
-    @Override
-    public String getType() {
-        return "1";
-    }
 }

@@ -9,6 +9,11 @@ public class SomeLogSubDynamicField extends SomeLog {
 
     private HashMap dynamicField = new HashMap();
 
+
+    public SomeLogSubDynamicField(String type) {
+        super(type);
+    }
+
     public HashMap getDynamicField() {
         return dynamicField;
     }
